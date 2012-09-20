@@ -18,7 +18,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>arquillian-iphone-parent</name>
+    <name>arquillian-iphone-aggregator</name>
 
     <developers>
         <developer>
@@ -35,13 +35,16 @@
 
     <!-- Modules -->
     <modules>
-        <module>arquillian-iphone-api</module>
-        <module>arquillian-iphone-bom</module>
-        <module>arquillian-iphone-build</module>
-        <module>arquillian-iphone-depchain</module>
-        <module>arquillian-iphone-drone</module>
-        <module>arquillian-iphone-impl</module>
-        <module>arquillian-iphone-spi</module>
+        <module>api</module>
+        <module>bom</module>
+        <module>build</module>
+        <module>depchain</module>
+        <module>drone</module>
+        <module>ftest</module>
+        <module>impl</module>
+        <module>resources</module>
+        <module>spi</module>
+        <module>util</module>
     </modules>
 
 </project>

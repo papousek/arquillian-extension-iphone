@@ -6,16 +6,16 @@
 
     <parent>
         <groupId>org.jboss.arquillian.extension</groupId>
-        <artifactId>arquillian-iphone-build</artifactId>
+        <artifactId>arquillian-ios-build</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../build/pom.xml</relativePath>
     </parent>
 
     <!-- Artifact Configuration -->
-    <artifactId>arquillian-iphone-ftest</artifactId>
+    <artifactId>arquillian-ios-ftest</artifactId>
     <packaging>jar</packaging>
 
-    <name>arquillian-iphone-ftest</name>
+    <name>arquillian-ios-ftest</name>
 
     <dependencies>
         <!-- Arquillian JUnit -->
@@ -34,12 +34,12 @@
         <!-- IPhone -->
         <dependency>
             <groupId>org.jboss.arquillian.extension</groupId>
-            <artifactId>arquillian-iphone-drone</artifactId>
+            <artifactId>arquillian-ios-drone</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.arquillian.extension</groupId>
-            <artifactId>arquillian-iphone-impl</artifactId>
+            <artifactId>arquillian-ios-impl</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

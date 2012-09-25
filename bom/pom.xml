@@ -6,11 +6,11 @@
 
     <!-- Artifact Configuration -->
     <groupId>org.jboss.arquillian.extension</groupId>
-    <artifactId>arquillian-iphone-bom</artifactId>
+    <artifactId>arquillian-ios-bom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>arquillian-iphone-bom</name>
+    <name>arquillian-ios-bom</name>
 
     <developers>
         <developer>
@@ -20,9 +20,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://git@github.com:papousek/arquillian-extension-iphone.git</connection>
-        <developerConnection>scm:git:ssh://github.com/papousek/arquillian-extension-iphone.git</developerConnection>
-        <url>git://github.com/papousek/arquillian-extension-iphone.git</url>
+        <connection>scm:git:git://git@github.com:papousek/arquillian-extension-ios.git</connection>
+        <developerConnection>scm:git:ssh://github.com/papousek/arquillian-extension-ios.git</developerConnection>
+        <url>git://github.com/papousek/arquillian-extension-ios.git</url>
     </scm>
 
     <dependencyManagement>
@@ -43,27 +43,27 @@
             </dependency>
             <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
-                <artifactId>arquillian-iphone-api</artifactId>
+                <artifactId>arquillian-ios-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
-                <artifactId>arquillian-iphone-spi</artifactId>
+                <artifactId>arquillian-ios-spi</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
-                <artifactId>arquillian-iphone-util</artifactId>
+                <artifactId>arquillian-ios-util</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
-                <artifactId>arquillian-iphone-impl</artifactId>
+                <artifactId>arquillian-ios-impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
-                <artifactId>arquillian-iphone-drone</artifactId>
+                <artifactId>arquillian-ios-drone</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

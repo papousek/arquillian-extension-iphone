@@ -6,22 +6,22 @@
 
     <parent>
         <groupId>org.jboss.arquillian.extension</groupId>
-        <artifactId>arquillian-iphone-aggregator</artifactId>
+        <artifactId>arquillian-ios-aggregator</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <!-- Artifact Configuration -->
-    <artifactId>arquillian-iphone-build</artifactId>
+    <artifactId>arquillian-ios-build</artifactId>
     <packaging>pom</packaging>
 
-    <name>arquillian-iphone-build</name>
+    <name>arquillian-ios-build</name>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.jboss.arquillian.extension</groupId>
-                <artifactId>arquillian-iphone-bom</artifactId>
+                <artifactId>arquillian-ios-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -46,7 +46,7 @@
                 <version>1.9.0</version>
                 <configuration>
                     <basedir>${basedir}</basedir>
-                    <header>license/arquillian-extension-iphone-license-header.txt</header>
+                    <header>license/arquillian-extension-ios-license-header.txt</header>
                     <quiet>false</quiet>
                     <failIfMissing>false</failIfMissing>
                     <strictCheck>true</strictCheck>
@@ -76,7 +76,7 @@
                 <dependencies>
                     <dependency>
                         <groupId>org.jboss.arquillian.extension</groupId>
-                        <artifactId>arquillian-iphone-resources</artifactId>
+                        <artifactId>arquillian-ios-resources</artifactId>
                         <version>${project.version}</version>
                     </dependency>
                 </dependencies>

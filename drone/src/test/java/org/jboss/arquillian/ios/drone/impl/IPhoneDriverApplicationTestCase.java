@@ -14,21 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.arquillian.ios.impl;
+package org.jboss.arquillian.ios.drone.impl;
 
 import java.io.IOException;
+import org.jboss.arquillian.ios.api.Application;
 import org.junit.Assert;
 import org.junit.Test;
 
 /**
  * @author <a href="jpapouse@redhat.com">Jan Papousek</a>
  */
-public class WaxSimTestCase {
+public class IPhoneDriverApplicationTestCase {
 
     @Test
-    public void testBuild() throws IOException {
-        WaxSim waxSim = new WaxSim(true);
-        Assert.assertTrue(waxSim.getBinary().exists());
+    public void testInit() throws IOException {
+        Application application = new IPhoneDriverApplication();
+        Assert.assertTrue(application.getLocation().exists());
     }
 
 }

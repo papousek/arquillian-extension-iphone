@@ -14,21 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.arquillian.ios.impl;
+package org.jboss.arquillian.ios.ftest;
 
-import java.io.IOException;
-import org.junit.Assert;
+import junit.framework.Assert;
+import org.jboss.arquillian.drone.api.annotation.Drone;
+import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.iphone.IPhoneDriver;
 
 /**
  * @author <a href="jpapouse@redhat.com">Jan Papousek</a>
  */
-public class WaxSimTestCase {
+@RunWith(Arquillian.class)
+public class DroneTestCase {
+
+    @Drone
+    private IPhoneDriver browser;
 
     @Test
-    public void testBuild() throws IOException {
-        WaxSim waxSim = new WaxSim(true);
-        Assert.assertTrue(waxSim.getBinary().exists());
+    public void open() {
+        browser.get("http://google.com");
+        Assert.assertTrue(browser.getTitle().contains("Google"));
     }
 
 }

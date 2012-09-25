@@ -6,25 +6,25 @@
 
     <parent>
         <groupId>org.jboss.arquillian.extension</groupId>
-        <artifactId>arquillian-iphone-build</artifactId>
+        <artifactId>arquillian-ios-build</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../build/pom.xml</relativePath>
     </parent>
 
     <!-- Artifact Configuration -->
-    <artifactId>arquillian-iphone-depchain</artifactId>
+    <artifactId>arquillian-ios-depchain</artifactId>
     <packaging>pom</packaging>
 
-    <name>arquillian-iphone-depchain</name>
+    <name>arquillian-ios-depchain</name>
 
     <dependencies>
         <dependency>
             <groupId>org.jboss.arquillian.extension</groupId>
-            <artifactId>arquillian-iphone-impl</artifactId>
+            <artifactId>arquillian-ios-impl</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jboss.arquillian.extension</groupId>
-            <artifactId>arquillian-iphone-drone</artifactId>
+            <artifactId>arquillian-ios-drone</artifactId>
         </dependency>
     </dependencies>
 

@@ -1,1 +1,1 @@
-org.jboss.arquillian.iphone.drone.IPhoneDroneExtension
+org.jboss.arquillian.ios.drone.IOSDroneExtension

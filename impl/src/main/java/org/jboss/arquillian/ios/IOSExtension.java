@@ -14,21 +14,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.arquillian.ios.impl;
+package org.jboss.arquillian.ios;
 
-import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Test;
+import org.jboss.arquillian.core.spi.LoadableExtension;
+import org.jboss.arquillian.ios.impl.ApplicationLauncherRegistrar;
 
 /**
  * @author <a href="jpapouse@redhat.com">Jan Papousek</a>
  */
-public class WaxSimTestCase {
+public class IOSExtension implements LoadableExtension {
 
-    @Test
-    public void testBuild() throws IOException {
-        WaxSim waxSim = new WaxSim(true);
-        Assert.assertTrue(waxSim.getBinary().exists());
+    public void register(ExtensionBuilder builder) {
+        builder.observer(ApplicationLauncherRegistrar.class);
     }
 
 }

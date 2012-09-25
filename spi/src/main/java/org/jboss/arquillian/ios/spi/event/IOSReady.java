@@ -14,21 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.arquillian.ios.impl;
-
-import java.io.IOException;
-import org.junit.Assert;
-import org.junit.Test;
+package org.jboss.arquillian.ios.spi.event;
 
 /**
  * @author <a href="jpapouse@redhat.com">Jan Papousek</a>
  */
-public class WaxSimTestCase {
-
-    @Test
-    public void testBuild() throws IOException {
-        WaxSim waxSim = new WaxSim(true);
-        Assert.assertTrue(waxSim.getBinary().exists());
-    }
-
+public class IOSReady {
 }

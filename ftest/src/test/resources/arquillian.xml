@@ -24,9 +24,11 @@
     </extension>
 
     <extension qualifier="ios-drone">
+        <property name="localSeleniumCopy">/Users/jboss/Workspace/selenium-read-only</property>
     </extension>
 
     <extension qualifier="webdriver">
+        <property name="browserCapabilities">iphone</property>
         <property name="remote">true</property>
     </extension>
 

@@ -34,12 +34,8 @@
         <!-- IPhone -->
         <dependency>
             <groupId>org.jboss.arquillian.extension</groupId>
-            <artifactId>arquillian-ios-drone</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.arquillian.extension</groupId>
-            <artifactId>arquillian-ios-impl</artifactId>
+            <artifactId>arquillian-ios-depchain</artifactId>
+            <type>pom</type>
             <scope>test</scope>
         </dependency>
     </dependencies>

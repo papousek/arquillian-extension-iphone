@@ -71,7 +71,7 @@ public class ApplicationLauncherRegistrar {
     }
 
     public void killall(@Observes AfterSuite event) throws IOException {
-        ProcessExecutor.execute("killall", "\"iPhone Simulator\"");
+        ProcessExecutor.execute("killall", "iPhone Simulator");
     }
 
 }

@@ -17,6 +17,9 @@
 package org.jboss.arquillian.ios.drone.impl;
 
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.concurrent.TimeUnit;
 import org.jboss.arquillian.config.descriptor.api.ArquillianDescriptor;
 import org.jboss.arquillian.core.api.Event;
 import org.jboss.arquillian.core.api.InstanceProducer;
@@ -51,7 +54,29 @@ public class IOSDroneRegistrar {
     public void register(@Observes IOSDroneConfigured event, ApplicationLauncher launcher) throws IOException, InterruptedException {
         Application application = new IPhoneDriverApplication(configuration.get().getLocalSeleniumCopy(), IPhoneDriverApplication.SVN_TRUNK);
         launcher.launch(application);
-        Thread.sleep(1000); // FIXME
+        // wait until selenium is reachable
+        boolean reachable = false;
+        long expectedTimeout = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(configuration.get().getTimeoutInSeconds());
+        while (!reachable) {
+            HttpURLConnection connection = null;
+            try {
+                connection = (HttpURLConnection) new URL("http://localhost:3001/wd/hub").openConnection();
+                if (connection.getResponseCode() == 200) {
+                    reachable = true;
+                } else {
+                    Thread.sleep(100);
+                }
+            } catch(Exception ignored) {
+                Thread.sleep(100);
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+            }
+            if (expectedTimeout < System.currentTimeMillis()) {
+                throw new IllegalStateException("Can't start application for Selenium support.");
+            }
+        }
         ready.fire(new IOSDroneReady());
     }
 

@@ -28,8 +28,7 @@
     </extension>
 
     <extension qualifier="webdriver">
-        <property name="browserCapabilities">iphone</property>
-        <property name="remote">true</property>
+        <property name="remoteAddress">http://localhost:3001/wd/hub</property>
     </extension>
 
 </arquillian>
